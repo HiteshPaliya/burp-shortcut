@@ -20,17 +20,18 @@ mv ./burp/media/icon64.png ${HOME}/.local/share/pixmaps/burpsuite.png
 # Make applications directory (where the shortcut will be placed)
 mkdir -p ${HOME}/.local/share/applications/
  
-#Create launcher item
-cat << EOF > ${HOME}/.local/share/applications/burpsuite.desktop
-[Desktop Entry]
-Name=Burp Suite
-Version=${BURP_VER}
-Exec=/usr/bin/java -jar ${BURP_PATH}/burpsuite_free_v${BURP_VER}.jar 
-Icon=${HOME}/.local/share/pixmaps/burpsuite.png
-Terminal=false
-Type=Application
-Categories=Utility;Application;
-EOF
-
-# Delete the ./burp/ directory
-rm -rf ./burp/
+#Create launcher item  
+cat << EOF > ${HOME}/.local/share/applications/burpsuite.desktop  
+[Desktop Entry]  
+Name=Burp Suite  
+Version=${BURP_VER}  
+Exec=/usr/bin/java -jar ${BURP_PATH}/burpsuite_free_v${BURP_VER}.jar   
+Icon=${HOME}/.local/share/pixmaps/burpsuite.png  
+Terminal=false  
+Type=Application  
+Categories=Utility;Application;  
+EOF  
+  
+# Delete the ./burp/ directory  
+rm -rf ./burp/  
+  
